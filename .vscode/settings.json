@@ -1,0 +1,35 @@
+{
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
+    "idf.adapterTargetName": "esp32",
+    "idf.customExtraPaths": "C:\\Users\\stanislav.perchenko\\.espressif\\tools\\xtensa-esp32-elf\\esp-2021r1-8.4.0\\xtensa-esp32-elf\\bin;C:\\Users\\stanislav.perchenko\\.espressif\\tools\\xtensa-esp32s2-elf\\esp-2021r1-8.4.0\\xtensa-esp32s2-elf\\bin;C:\\Users\\stanislav.perchenko\\.espressif\\tools\\xtensa-esp32s3-elf\\esp-2021r1-8.4.0\\xtensa-esp32s3-elf\\bin;C:\\Users\\stanislav.perchenko\\.espressif\\tools\\riscv32-esp-elf\\esp-2021r1-8.4.0\\riscv32-esp-elf\\bin;C:\\Users\\stanislav.perchenko\\.espressif\\tools\\esp32ulp-elf\\2.28.51-esp-20191205\\esp32ulp-elf-binutils\\bin;C:\\Users\\stanislav.perchenko\\.espressif\\tools\\esp32s2ulp-elf\\2.28.51-esp-20191205\\esp32s2ulp-elf-binutils\\bin;C:\\Users\\stanislav.perchenko\\.espressif\\tools\\cmake\\3.16.4\\bin;C:\\Users\\stanislav.perchenko\\.espressif\\tools\\openocd-esp32\\v0.10.0-esp32-20210401\\openocd-esp32\\bin;C:\\Users\\stanislav.perchenko\\.espressif\\tools\\ninja\\1.10.2;C:\\Users\\stanislav.perchenko\\.espressif\\tools\\idf-exe\\1.0.1;C:\\Users\\stanislav.perchenko\\.espressif\\tools\\ccache\\3.7;C:\\Users\\stanislav.perchenko\\.espressif\\tools\\dfu-util\\0.9\\dfu-util-0.9-win64",
+    "idf.customExtraVars": "{\"OPENOCD_SCRIPTS\":\"C:\\\\Users\\\\stanislav.perchenko\\\\.espressif\\\\tools\\\\openocd-esp32\\\\v0.10.0-esp32-20210401/openocd-esp32/share/openocd/scripts\",\"IDF_CCACHE_ENABLE\":\"1\"}",
+    "idf.espIdfPathWin": "C:\\Users\\stanislav.perchenko\\esp\\esp-idf",
+    "idf.openOcdConfigs": [
+        "interface/ftdi/esp32_devkitjv1.cfg",
+        "target/esp32.cfg"
+    ],
+    "files.associations": {
+        "sdkconfig.h": "c",
+        "gpio.h": "c",
+        "task.h": "c",
+        "gpio_types.h": "c",
+        "gpio_periph.h": "c",
+        "htu21d.h": "c",
+        "i2c.h": "c",
+        "esp_types.h": "c",
+        "soc_caps.h": "c",
+        "functional": "c",
+        "optional": "c",
+        "istream": "c",
+        "ostream": "c",
+        "ratio": "c",
+        "system_error": "c",
+        "array": "c",
+        "tuple": "c",
+        "type_traits": "c",
+        "utility": "c",
+        "complex": "c"
+    },
+    "idf.pythonBinPathWin": "C:\\Users\\stanislav.perchenko\\.espressif\\python_env\\idf4.3_py3.8_env\\Scripts\\python.exe",
+    "idf.toolsPathWin": "C:\\Users\\stanislav.perchenko\\.espressif"
+}
