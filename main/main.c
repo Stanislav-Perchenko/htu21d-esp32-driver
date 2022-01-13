@@ -1,11 +1,3 @@
-/* Hello World Example
-
-   This example code is in the Public Domain (or CC0 licensed, at your option.)
-
-   Unless required by applicable law or agreed to in writing, this
-   software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
-   CONDITIONS OF ANY KIND, either express or implied.
-*/
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -21,7 +13,13 @@
 #define HTU21D_SCL_GPIO 27
 #define HTU21D_I2C_NUM  I2C_NUM_0
 
+#define BLINK_GPIO  13
+#define USER_LED_ON     gpio_set_level(BLINK_GPIO, 1)
+#define USER_LED_OFF     gpio_set_level(BLINK_GPIO, 0)
+
 #define DELAY_SENSOR_READ_MS 1000
+
+
 
 
 
@@ -56,6 +54,7 @@ static void htu21d_test_task(void *arg)
 
     while (1) {
         xSemaphoreTake(htu_mux, portMAX_DELAY);
+        USER_LED_ON;
         printf("TASK[%d] test cnt: %d\r\n", task_idx, cnt++);
 
         printf("Setting up sensor resolutions (T -> %dbit, RH -> %dbit)... ", temp_resolution, rh_resolution);
@@ -83,7 +82,7 @@ static void htu21d_test_task(void *arg)
         }
 
         printf("\r\n\n\n");
-
+        USER_LED_OFF;
         xSemaphoreGive(htu_mux);
 
         vTaskDelay((DELAY_SENSOR_READ_MS * (task_idx)) / portTICK_RATE_MS);
@@ -116,6 +115,9 @@ void app_main(void)
         .task_index = 4,
         .sensor_resolution = htu21d_resolution_t11b_rh11b
     };
+
+    gpio_reset_pin(BLINK_GPIO);
+    gpio_set_direction(BLINK_GPIO, GPIO_MODE_OUTPUT);
 
     printf("Initializing HTU21D driver... ");
 
